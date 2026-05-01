@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bienvenue — نور العلم Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: linear-gradient(135deg, #0a1f0f 0%, #0f2d14 50%, #1a3a10 100%);
+  color: #f5f0e8; min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+}
+.card {
+  background: rgba(15,45,20,0.8);
+  border: 1px solid rgba(45,158,78,0.3);
+  border-radius: 28px; padding: 40px 32px;
+  max-width: 480px; width: 100%;
+  text-align: center;
+  backdrop-filter: blur(20px);
+}
+.logo {
+  font-family: 'Scheherazade New', serif;
+  font-size: 64px; color: #4acc6e;
+  text-shadow: 0 0 40px rgba(74,204,110,0.4);
+  margin-bottom: 8px;
+}
+.checkmark {
+  font-size: 56px; margin-bottom: 16px;
+  animation: pop 0.5s ease;
+}
+@keyframes pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+h1 {
+  font-size: 22px; color: #f5f0e8;
+  margin-bottom: 6px;
+}
+.subtitle {
+  font-size: 13px; color: rgba(245,240,232,0.5);
+  margin-bottom: 32px;
+}
+.portal-btn {
+  display: block; width: 100%;
+  padding: 16px; margin-bottom: 24px;
+  background: linear-gradient(135deg, #1a5c2a, #2d9e4e);
+  border: none; border-radius: 14px;
+  color: #fff; font-size: 16px; font-weight: 700;
+  text-decoration: none; cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.3s;
+}
+.portal-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(45,158,78,0.4); }
+
+.divider {
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(245,240,232,0.3); margin-bottom: 20px;
+}
+.pwd-grid { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+.pwd-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(45,158,78,0.2);
+  border-radius: 14px; padding: 14px 16px;
+  display: flex; align-items: center; gap: 12px;
+  text-align: left;
+}
+.pwd-icon { font-size: 24px; flex-shrink: 0; }
+.pwd-info { flex: 1; }
+.pwd-app { font-size: 13px; font-weight: 600; color: #f5f0e8; margin-bottom: 2px; }
+.pwd-app-ar { font-family: 'Scheherazade New', serif; font-size: 16px; color: #c9a84c; }
+.pwd-label { font-size: 11px; color: rgba(245,240,232,0.4); margin-bottom: 4px; }
+.pwd-value {
+  font-size: 15px; font-weight: 700; color: #4acc6e;
+  background: rgba(74,204,110,0.1);
+  border: 1px solid rgba(74,204,110,0.2);
+  border-radius: 8px; padding: 4px 10px;
+  display: inline-block; letter-spacing: 1px;
+  cursor: pointer; transition: all 0.2s;
+}
+.pwd-value:hover { background: rgba(74,204,110,0.2); }
+.copy-hint { font-size: 10px; color: rgba(245,240,232,0.3); margin-top: 4px; }
+
+.note {
+  font-size: 12px; color: rgba(245,240,232,0.4);
+  line-height: 1.6; margin-bottom: 20px;
+  background: rgba(201,168,76,0.06);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 12px; padding: 12px 16px;
+}
+.footer {
+  font-size: 11px; color: rgba(245,240,232,0.25);
+  margin-top: 24px;
+}
+.footer-logo { font-family: 'Scheherazade New', serif; font-size: 22px; color: #4acc6e; }
+
+.toast {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+  background: #1a5c2a; color: #fff;
+  padding: 10px 24px; border-radius: 50px;
+  font-size: 13px; font-weight: 600;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s; z-index: 999;
+}
+.toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+<div class="toast" id="toast">✅ Copié !</div>
+
+<div class="card">
+  <div class="checkmark">✅</div>
+  <div class="logo">نور العلم</div>
+  <h1>Paiement confirmé !</h1>
+  <p class="subtitle">Bienvenue dans نور العلم Pro — Voici votre accès complet</p>
+
+  <a class="portal-btn" href="https://nural3ilm.github.io/nural3ilm-portail/" target="_blank">
+    🌐 Accéder au Portail →
+  </a>
+
+  <div class="divider">Vos mots de passe</div>
+
+  <div class="pwd-grid">
+    <div class="pwd-card">
+      <div class="pwd-icon">📖</div>
+      <div class="pwd-info">
+        <div class="pwd-app">Nour Al-Ilm <span class="pwd-app-ar">نور العلم</span></div>
+        <div class="pwd-label">Arabe & Tajwid</div>
+        <div class="pwd-value" onclick="copyPwd('islam2025')">islam2025</div>
+        <div class="copy-hint">Cliquez pour copier</div>
+      </div>
+    </div>
+
+    <div class="pwd-card">
+      <div class="pwd-icon">🤲</div>
+      <div class="pwd-info">
+        <div class="pwd-app">Invocations <span class="pwd-app-ar">دُعَاء</span></div>
+        <div class="pwd-label">500+ douâas authentiques</div>
+        <div class="pwd-value" onclick="copyPwd('douaa2025')">douaa2025</div>
+        <div class="copy-hint">Cliquez pour copier</div>
+      </div>
+    </div>
+
+    <div class="pwd-card">
+      <div class="pwd-icon">🔎</div>
+      <div class="pwd-info">
+        <div class="pwd-app">Nour Al-Kalima <span class="pwd-app-ar">نور الكلمة</span></div>
+        <div class="pwd-label">Vocabulaire coranique</div>
+        <div class="pwd-value" onclick="copyPwd('kalima2025')">kalima2025</div>
+        <div class="copy-hint">Cliquez pour copier</div>
+      </div>
+    </div>
+
+    <div class="pwd-card">
+      <div class="pwd-icon">🇫🇷</div>
+      <div class="pwd-info">
+        <div class="pwd-app">Français Vivant</div>
+        <div class="pwd-label">Apprendre le français</div>
+        <div class="pwd-value" onclick="copyPwd('francais2025')">francais2025</div>
+        <div class="copy-hint">Cliquez pour copier</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    💡 <strong>Conseil :</strong> Sauvegardez cette page ou notez vos mots de passe. Vous pouvez y revenir à tout moment depuis votre espace Whop.
+  </div>
+
+  <div class="footer">
+    <div class="footer-logo">نور العلم</div>
+    <div>Nour Al-Ilm Pro — whop.com/nur-al-ilm-pro</div>
+    <div style="margin-top:4px;">بارك الله فيكم 🤲</div>
+  </div>
+</div>
+
+<script>
+function copyPwd(pwd) {
+  navigator.clipboard.writeText(pwd).then(function() {
+    var t = document.getElementById("toast");
+    t.classList.add("show");
+    setTimeout(function() { t.classList.remove("show"); }, 2000);
+  });
+}
+</script>
+</body>
+</html>
